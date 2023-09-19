@@ -6,12 +6,6 @@ class ContactsController < ApplicationController
         @contacts = Contact.all
 
         render json: @contacts
-        # render json: @contacts, methods: :author # Executa um método dentro do objeto "Contact" e atribui como chave o "author" e como valor o retorno do método
-        # render json: @contacts.attributes.merge({ author: "Jackson" }) # Adiciona um novo dado aos atributos já existentes de uma coleção
-        # render json: @contacts, only: [:name, :email] # O "only" define quais atributos vão ser enviados através da resposta HTTP
-        # render json: @contacts, except: [:name, :email] # O "except" define quais atributos NÃO vão ser enviados através da resposta HTTP
-        # render json: @contacts, root: true # O "root" envia junto com o corpo da resposta, o tipo do objeto enviado
-        # render json: @contacts, status: :no_content # O atributo "status" indica o tipo de código HTTP que será enviado como resposta à requisição
     end
 
     # GET /contacts/1

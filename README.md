@@ -55,5 +55,13 @@ class X
 end
 ```
 
+### 03 - Migration | Object References
+* Gerar um objeto que é referenciado em outro objeto com `rails g scaffold Kind description:string`.
+* Criar uma ***migration*** com `rails g migration add_kind_to_contact kind:references`, onde o `kind:references` diz que vai ser criado um novo atributo que referencia outro objeto.
+> IMPORTANTE! É necessário primeiro criar o objeto no qual vai ser referenciado, e só depois criar uma migration referenciando o objeto.
+* Resetar o banco com o comando `rails db:drop db:create db:migrate dev:setup`.
+> No Windows, é necessário executar o "db:drop" como "db:drop:_unsafe".
+* Realizar a associação na classe que vai referênciar outro objeto.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
