@@ -66,5 +66,10 @@ end
 ### 04 - JSON Response Formats
 * Formatar **JSON** no corpo do *response*.
 
+### 05 - 
+* Deixar um objeto de dependência através do **JSON** no **POST** opcional.
+* Permitir valores **nulos** excluindo o parâmetro `null: false` no *db/schema.rb*.
+* Permitir outros parâmetros adicionando no arquivo de *controller* da classe.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

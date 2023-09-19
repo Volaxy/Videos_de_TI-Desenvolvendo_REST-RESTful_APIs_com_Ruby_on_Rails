@@ -46,6 +46,7 @@ class ContactsController < ApplicationController
 
         # Only allow a list of trusted parameters through.
         def contact_params
-            params.require(:contact).permit(:name, :email, :birthdate)
+            # Os parâmetros enviados no corpo da requisição do "body" só serão aceitos caso estejam inseridos dentro do método "permit()"
+            params.require(:contact).permit(:name, :email, :birthdate, :kind_id)
         end
 end
