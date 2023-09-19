@@ -31,5 +31,29 @@ URL do curso -> [Desenvolvendo REST / RESTful APIs com Ruby on Rails](https://ww
 * Gerar uma tarefa com `rails g task TASK_NAME`.
 * Rodar uma tarefa com `rails TASK_NAME`.
 
+### 02 - Status Code | Response Parameters
+* Setar o ***Status Code*** de uma resposta de uma requisição **HTTP**.
+* Configurar o projeto para ser compilado toda vez que haver mudança no código com `config.file_watcher = ActiveSupport::FileUpdateChecker`.
+* Setar parâmetros para a resposta da requisição:
+    * `root: true`: Enviar o tipo do objeto.
+    * `only: [:name, :email]`: Enviar somente *X* atributos.
+    * `except: [:name, :email]`: Enviar exceto *X* atributos.
+* Adicionar atributos extras com:
+```ruby
+render json: @contacts.attributes.merge({ author: "Jackson" })
+```
+* Adicionar métodos:
+```ruby
+render json: @contacts, methods: :author
+```
+* Redefinir a exibição **JSON** com
+```ruby
+class X
+    def as_json
+        ...
+    end
+end
+```
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
