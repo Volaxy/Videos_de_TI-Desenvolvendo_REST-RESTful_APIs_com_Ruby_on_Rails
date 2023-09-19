@@ -63,5 +63,8 @@ end
 > No Windows, é necessário executar o "db:drop" como "db:drop:_unsafe".
 * Realizar a associação na classe que vai referênciar outro objeto.
 
+### 04 - JSON Response Formats
+* Formatar **JSON** no corpo do *response*.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
