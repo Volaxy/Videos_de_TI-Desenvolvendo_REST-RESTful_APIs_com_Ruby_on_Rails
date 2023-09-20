@@ -35,7 +35,7 @@ class Contact < ApplicationRecord
     # ]
     # ...
     accepts_nested_attributes_for :phones, allow_destroy: true
-    accepts_nested_attributes_for :address
+    accepts_nested_attributes_for :address, update_only:true # Indica que quando os dados forem atualizados, o registro do "Address" só será ATUALIZADO, no caso, não se criará outro registro "Address"
 
     def birthdate_br
         I18n.l(self.birthdate) unless self.birthdate.blank?
@@ -44,6 +44,7 @@ class Contact < ApplicationRecord
     # Sobrescrita do json que será enviado...
     def as_json(options = {}) # As "options" são os parâmetros enviados para esta função de sobrescrita no momento que a função é invocada no controller
         hash = super(options) # Pega o "Hash" que é criado
+        puts hash
         hash[:birthdate] = (I18n.l(self.birthdate) unless self.birthdate.blank?)
 
         hash

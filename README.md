@@ -89,8 +89,9 @@ end
 * `_destroy`.
 * *pry-rails* para facilitar na leitura pelo console.
 
-### 10 - Address Creation
+### 10 - Address Creation & CRUD with has_one
 * Criação do ***`Address`***.
+* Não permitir a criação de um novo dado atrelado à um objeto com `update_only: true`.
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

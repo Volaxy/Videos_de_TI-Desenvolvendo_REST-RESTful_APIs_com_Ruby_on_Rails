@@ -47,7 +47,7 @@ namespace :dev do
         puts "Registering Phones..."
         
         Contact.all.each do |contact|
-            rand(2).times do
+            (rand(2) + 1).times do
                 phone = Phone.create!(
                     number: Faker::PhoneNumber.phone_number,
                     contact: contact
@@ -63,6 +63,7 @@ namespace :dev do
 
         
         ############################################################
+        # OBS.: O Rails permite a criação de mais de um dado associado com o mesmo tipo mesmo estando com "has_only", mas o dado que será anexado ao objeto será o último dado criado
         ##### Address's #####
         puts "Registering Address..."
         
