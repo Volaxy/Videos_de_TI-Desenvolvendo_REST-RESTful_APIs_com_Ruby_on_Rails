@@ -77,6 +77,7 @@ end
 * Listar atributos de acordo com o ***Locale*** do **I18n**.
 
 ### 07 - Association has_many
+* Criar um nova entidade sem rota de API com `rails g model ENTITY ATTRIBUTES ATTRIBUTE:references`.
 * Criação da nova classe ***`Phone`***.
 * Associar um `Contact` em um `Phone`.
 
@@ -87,6 +88,9 @@ end
 * CRUD de uma entidade com objetos aninhados.
 * `_destroy`.
 * *pry-rails* para facilitar na leitura pelo console.
+
+### 10 - Address Creation
+* Criação do ***`Address`***.
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

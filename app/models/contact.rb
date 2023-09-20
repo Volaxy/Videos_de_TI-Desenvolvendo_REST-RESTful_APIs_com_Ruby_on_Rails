@@ -2,7 +2,8 @@ class Contact < ApplicationRecord
     # ASSOCIATIONS
     # Referênciar outro objeto colocando ":" seguido do nome dele
     belongs_to :kind
-    has_many :phones # o "has_many" indica que 1 "Contact" tem muitos "Phone"s, no caso a associação "1 para N"
+    has_many :phones # O "has_many" indica que 1 "Contact" tem muitos "Phone"s, no caso a associação "1 para N"
+    has_one :address # Indica que uma instância de "Contact" só pode ter dado de "address"
 
     # Caso seja colocado esse parâmetro, ele vai aceitar inserções de dados através de nesting:
     # params = { contact: {
@@ -34,6 +35,7 @@ class Contact < ApplicationRecord
     # ]
     # ...
     accepts_nested_attributes_for :phones, allow_destroy: true
+    accepts_nested_attributes_for :address
 
     def birthdate_br
         I18n.l(self.birthdate) unless self.birthdate.blank?

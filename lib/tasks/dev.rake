@@ -1,6 +1,9 @@
 namespace :dev do
     desc "Configure the development enviroment"
     task setup: :environment do
+        "Reseting DB..."
+        %x(rails db:drop:_unsafe db:create db:migrate) # Faz com que comandos sejam executados automaticamente
+
         # OBS: É importante primeiro criar as classes isoladas e depois referencia-las em outras classes para evitar problemas com referência nula
 
         ############################################################
@@ -23,7 +26,7 @@ namespace :dev do
         ##### CONTACT's #####
         puts "Registering contacts..."
         
-        50.times do |i|
+        10.times do |i|
             # Caso dê erro, o "!" estoura esse erro na tela
             Contact.create!(
                 # A gem "Faker" realiza operações de criação de dados fictícios
@@ -37,12 +40,14 @@ namespace :dev do
         
         puts "Successfully registered contacts!\n"
         
+
+
         ############################################################
         ##### PHONE's #####
         puts "Registering Phones..."
         
         Contact.all.each do |contact|
-            rand(5).times do
+            rand(2).times do
                 phone = Phone.create!(
                     number: Faker::PhoneNumber.phone_number,
                     contact: contact
@@ -54,7 +59,24 @@ namespace :dev do
         end
         
         puts "Successfully registered Phones!\n"
+        
 
+        
+        ############################################################
+        ##### Address's #####
+        puts "Registering Address..."
+        
+        Contact.all.each do |contact|
+            address = Address.create!(
+                street: Faker::Address.street_name,
+                city: Faker::Address.city,
+                contact: contact
+            )
+
+            contact.save
+        end
+        
+        puts "Successfully registered Address!\n"
     end
 
 end
