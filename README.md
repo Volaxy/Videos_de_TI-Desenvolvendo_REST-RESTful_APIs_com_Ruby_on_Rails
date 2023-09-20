@@ -83,5 +83,10 @@ end
 ### 08 - Accept Parameters with I18n
 * Fazer a impressão dos valores **JSON** informando parâmetros e usando métodos com relação ao **I18n** que sobrescrevem o **JSON**.
 
+### 09 - Nested Attributes with has_many and CRUD
+* CRUD de uma entidade com objetos aninhados.
+* `_destroy`.
+* *pry-rails* para facilitar na leitura pelo console.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

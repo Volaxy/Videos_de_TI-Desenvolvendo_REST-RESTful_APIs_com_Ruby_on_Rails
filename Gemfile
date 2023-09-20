@@ -44,6 +44,8 @@ group :development, :test do
     gem "debug", platforms: %i[ mri mingw x64_mingw ]
     # A library for generating fake data such as names, addresses, and phone numbers.
     gem 'faker'
+    # A runtime developer console and IRB alternative with powerful introspection capabilities.
+    gem 'pry-rails'
 end
 
 group :development do
