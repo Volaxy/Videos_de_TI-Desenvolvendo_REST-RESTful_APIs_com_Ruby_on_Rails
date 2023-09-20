@@ -16,7 +16,8 @@ URL do curso -> [Desenvolvendo REST / RESTful APIs com Ruby on Rails](https://ww
 
 ## :computer: Linguagens Usadas
 <div>
-    <img alt='HTML Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/ruby.svg' />&nbsp;
+    <img alt='Ruby Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/ruby.svg' />&nbsp;
+    <img alt='Rails Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/rails.svg' />&nbsp;
 </div>
 
 ***
@@ -66,10 +67,14 @@ end
 ### 04 - JSON Response Formats
 * Formatar **JSON** no corpo do *response*.
 
-### 05 - 
+### 05 - Create "Contact" without an Kind and Allow "null" Values
 * Deixar um objeto de dependência através do **JSON** no **POST** opcional.
 * Permitir valores **nulos** excluindo o parâmetro `null: false` no *db/schema.rb*.
 * Permitir outros parâmetros adicionando no arquivo de *controller* da classe.
+
+### 06 - Locale e I18n
+* Definir o ***Locale*** da aplicação.
+* Listar atributos de acordo com o ***Locale*** do **I18n**.
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
