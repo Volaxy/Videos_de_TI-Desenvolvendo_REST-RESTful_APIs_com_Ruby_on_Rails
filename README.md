@@ -76,5 +76,9 @@ end
 * Definir o ***Locale*** da aplicação.
 * Listar atributos de acordo com o ***Locale*** do **I18n**.
 
+### 07 - Association has_many
+* Criação da nova classe ***`Phone`***.
+* Associar um `Contact` em um `Phone`.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

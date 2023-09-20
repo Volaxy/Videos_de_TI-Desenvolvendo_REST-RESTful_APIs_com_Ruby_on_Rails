@@ -3,6 +3,8 @@ namespace :dev do
     task setup: :environment do
         # OBS: É importante primeiro criar as classes isoladas e depois referencia-las em outras classes para evitar problemas com referência nula
 
+        ############################################################
+        ##### KIND's #####
         puts "Registering contact kinds..."
         
         # O "%w" faz as palavras separadas por " " serem strings
@@ -13,11 +15,12 @@ namespace :dev do
             )
         end
         
-        puts "Successfully registered contacts!"
-
-
-
-        kind_ids = Kind.pluck(:id)
+        puts "Successfully registered contacts!\n"
+        
+        
+        
+        ############################################################
+        ##### CONTACT's #####
         puts "Registering contacts..."
         
         50.times do |i|
@@ -32,7 +35,26 @@ namespace :dev do
             )
         end
         
-        puts "Successfully registered contacts!"
+        puts "Successfully registered contacts!\n"
+        
+        ############################################################
+        ##### PHONE's #####
+        puts "Registering Phones..."
+        
+        Contact.all.each do |contact|
+            rand(5).times do
+                phone = Phone.create!(
+                    number: Faker::PhoneNumber.phone_number,
+                    contact: contact
+                )
+
+                contact.phones << phone
+                contact.save
+            end
+        end
+        
+        puts "Successfully registered Phones!\n"
+
     end
 
 end
