@@ -6,13 +6,14 @@ class ContactsController < ApplicationController
         @contacts = Contact.all
 
         render json: @contacts
-        # Imprime a data no formato pt-BR
-        # render json: @contacts, methods: [:birthdate_br] #, methods: [:hello, :i18n] # Métodos de tradução que estão sendo executados (neste caso) juntamente com a impressão dos dados
     end
 
     # GET /contacts/1
     def show
-        render json: @contact.to_br
+        # O objetivo desse commit é fazer aparecer tanto o Tipo de contato (Kind), quanto a data formatada no padrão pt-BR, pois com a inclusão do :kind, o método ".to_br" acaba por sobrescrever a inclusão do valor :kind
+        # render json: @contact.to_br, include: :kind
+
+        render json: @contact, include: :kind
     end
 
     # POST /contacts

@@ -80,5 +80,8 @@ end
 * Criação da nova classe ***`Phone`***.
 * Associar um `Contact` em um `Phone`.
 
+### 08 - Accept Parameters with I18n
+* Fazer a impressão dos valores **JSON** informando parâmetros e usando métodos com relação ao **I18n** que sobrescrevem o **JSON**.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

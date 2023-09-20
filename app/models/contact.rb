@@ -8,11 +8,11 @@ class Contact < ApplicationRecord
         I18n.l(self.birthdate) unless self.birthdate.blank?
     end
 
-    def to_br
-        {
-            name: self.name,
-            email: self.email,
-            birthdate: (I18n.l(self.birthdate) unless self.birthdate.blank?)
-        }
+    # Sobrescrita do json que será enviado...
+    def as_json(options = {}) # As "options" são os parâmetros enviados para esta função de sobrescrita no momento que a função é invocada no controller
+        hash = super(options) # Pega o "Hash" que é criado
+        hash[:birthdate] = (I18n.l(self.birthdate) unless self.birthdate.blank?)
+
+        hash
     end
 end
