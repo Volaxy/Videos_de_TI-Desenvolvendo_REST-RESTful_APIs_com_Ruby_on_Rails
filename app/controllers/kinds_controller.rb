@@ -1,7 +1,7 @@
 class KindsController < ApplicationController
-    # No "Postman", clicar na aba "Authorization" e escolher o método "Digest Auth", preenchendo com o username "jack" e a senha "secret"
-    include ActionController::HttpAuthentication::Digest::ControllerMethods
-    USERS = {"jack" => OpenSSL::Digest::MD5.hexdigest(["jack","Application","secret"].join(":"))}  #ha1 digest password
+    include ActionController::HttpAuthentication::Token::ControllerMethods
+
+    TOKEN = "secret123"
 
     before_action :authenticate
     before_action :set_kind, only: %i[ show update destroy ]
@@ -60,8 +60,10 @@ class KindsController < ApplicationController
         end
 
         def authenticate
-            authenticate_or_request_with_http_digest("Application") do |username|
-                USERS[username]
+            authenticate_or_request_with_http_token do |token, options|
+                # Compare the tokens in a time-constant manner, to mitigate
+                # timing attacks.
+                ActiveSupport::SecurityUtils.secure_compare(token, TOKEN)
             end
         end
 end

@@ -20,6 +20,8 @@ URL do curso -> [Desenvolvendo REST / RESTful APIs com Ruby on Rails](https://ww
     <img alt='Rails Logo' height='60' width='50' src='https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/rails.svg' />&nbsp;
 </div>
 
+> Explicação do Código de cada capítulo dentro dos commits.
+
 ***
 
 ## 01 - Introdução ao Rails / API-only
@@ -115,6 +117,8 @@ end
 ## 03 - HTTP Authentication
 
 ### 01 - Digest Authentication
+
+### 02 - Token Authentication
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
