@@ -93,6 +93,8 @@ end
 * Criação do ***`Address`***.
 * Não permitir a criação de um novo dado atrelado à um objeto com `update_only: true`.
 
+***
+
 ## 02 - Active Model Serializers
 
 ### 01 - Routes of the Relationships
@@ -101,6 +103,9 @@ end
 * Criação de relacionamentos e rotas do `belongs_to`.
 * Criação de relacionamentos e rotas do `has_many`.
 * Criação de relacionamentos e rotas do `has_one`.
+
+### 02 - Routes of the Address
+* Criação de rotas para o `Address`.
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
