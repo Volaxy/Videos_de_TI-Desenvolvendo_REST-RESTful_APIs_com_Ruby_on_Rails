@@ -104,8 +104,17 @@ end
 * Criação de relacionamentos e rotas do `has_many`.
 * Criação de relacionamentos e rotas do `has_one`.
 
-### 02 - Routes of the Address
+### 02 - Routes of the Address (has_one)
 * Criação de rotas para o `Address`.
+
+### 03 - Routes of Phones (has_many)
+
+
+***
+
+## 03 - HTTP Authentication
+
+### 01 - Digest Authentication
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
