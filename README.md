@@ -156,5 +156,8 @@ end
 * Versionar a partir dos recursos de uma Gem.
 * Versionar os sub-modelos.
 
+### 04 - URL Segment
+* Especificar a versão antes do recurso na URL
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
