@@ -142,5 +142,12 @@ end
 ```
 * Nos *Headers* da resposta, vai aparecer *access-token*, *client* e *uid*, ao solicitar uma requisição, essas variáveis devem estar no *Headers* da requisição que está sendo feito para validação do usuário.
 
+***
+
+## 04 - Versionamento
+
+### 01 - Query Parameters
+* Versionar através da URL.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
