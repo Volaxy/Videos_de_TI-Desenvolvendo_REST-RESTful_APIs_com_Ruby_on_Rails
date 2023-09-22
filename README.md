@@ -124,5 +124,23 @@ end
 * Criar um *controller* com `rails g controller auths`.
 * Codificar/Decodificar os dados de uma requisição com **JWT**.
 
+### 04 - Device Token Auth
+* Primeiro registrar o user com uma requisição **POST** na URL: *http://localhost:3000/auth* enviando como corpo da requisição:
+```json
+{
+    "email": "volax@gmail.com",
+    "password": "12345678",
+    "password_confirmation": "12345678"
+}
+```
+* Depois logar com uma requisição **POST** na URL: *http://localhost:3000/auth/sign_in* enviando como corpo da requisição:
+```json
+{
+    "email": "volax@gmail.com",
+    "password": "12345678"
+}
+```
+* Nos *Headers* da resposta, vai aparecer *access-token*, *client* e *uid*, ao solicitar uma requisição, essas variáveis devem estar no *Headers* da requisição que está sendo feito para validação do usuário.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
