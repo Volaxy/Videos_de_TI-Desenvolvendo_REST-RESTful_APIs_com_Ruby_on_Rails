@@ -8,7 +8,9 @@ class AddressesController < ApplicationController
 
     # POST /contacts/1/address
     def create
-        # FIXME: Quando eu tento salvar somente 1 endereço, ele da o erro:
+        @contact.address.destroy
+
+        # if contact.address - Caso exista da msg de erro
         # ActiveRecord::RecordNotSaved (Failed to remove the existing associated address. The record failed to save after its foreign key was set to nil.):
         @contact.address = Address.new(address_params)
 

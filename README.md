@@ -120,5 +120,9 @@ end
 
 ### 02 - Token Authentication
 
+### 03 - JWT in Rails
+* Criar um *controller* com `rails g controller auths`.
+* Codificar/Decodificar os dados de uma requisição com **JWT**.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

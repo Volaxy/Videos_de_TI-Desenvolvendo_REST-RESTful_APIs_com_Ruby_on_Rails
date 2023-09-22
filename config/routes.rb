@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+    resources :auths, only: [:create]
+
     resources :kinds
     resources :contacts do # É o mesmo que "get "'/contacts', to: 'contacts#index' "
         resource :kind, only: [:show] # Define uma rota de "Kind" juntamente com "contacts" na URL, para retornar o "Kind" a partir do Id do "Contact"
