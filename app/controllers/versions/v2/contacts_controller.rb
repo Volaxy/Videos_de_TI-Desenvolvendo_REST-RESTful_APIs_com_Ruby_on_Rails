@@ -1,4 +1,4 @@
-module V2
+module Versions::V2
     class ContactsController < ApplicationController
         before_action :set_contact, only: %i[ show update destroy ]
 
