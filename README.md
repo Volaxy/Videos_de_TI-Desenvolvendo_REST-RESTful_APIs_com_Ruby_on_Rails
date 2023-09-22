@@ -159,5 +159,14 @@ end
 ### 04 - URL Segment
 * Especificar a versão antes do recurso na URL
 
+***
+
+## 05 - Ajustes e Paginação
+
+### 01 - Pagination
+* Usar a biblioteca **kaminari** para paginação de dados.
+* Controlar que página será acessada.
+* Controlar quantos dados cada página vai ter.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

@@ -4,9 +4,12 @@ module Versions::V1
 
         # GET /contacts
         def index
-            @contacts = Contact.all
+            # O ".page" informa em qual página que será retornado os dados, e de acordo com o ":page" será informado pela URL o número da página que será acessada
+            # O ".per" informa quantos elementos por página a busca deverá ter
+            # @contacts = Contact.all.page(params[:page]).per(5)
+            @contacts = Contact.all.page(params[:page]) # O ".per" é retirado por causa do "api-pagination"
 
-            render json: @contacts
+            paginate json: @contacts
         end
 
         # GET /contacts/1

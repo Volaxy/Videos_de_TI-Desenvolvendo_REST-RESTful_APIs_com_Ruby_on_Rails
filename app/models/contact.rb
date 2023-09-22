@@ -1,4 +1,7 @@
 class Contact < ApplicationRecord
+    # Kaminari
+    paginates_per 5
+
     # ASSOCIATIONS
     # Referênciar outro objeto colocando ":" seguido do nome dele
     belongs_to :kind
