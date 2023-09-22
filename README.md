@@ -150,7 +150,11 @@ end
 * Versionar através da URL.
 
 ### 02 - Versioning Controllers
+* Versionamento através de pastas de versões.
 
+### 03 - Gem Versionist
+* Versionar a partir dos recursos de uma Gem.
+* Versionar os sub-modelos.
 
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
