@@ -149,5 +149,8 @@ end
 ### 01 - Query Parameters
 * Versionar através da URL.
 
+### 02 - Versioning Controllers
+
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
