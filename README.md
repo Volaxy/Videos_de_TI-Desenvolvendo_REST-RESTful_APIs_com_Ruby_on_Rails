@@ -168,5 +168,12 @@ end
 * Controlar que página será acessada.
 * Controlar quantos dados cada página vai ter.
 
+***
+
+## 06 - Caching
+
+### 01 - Cache Control
+* Setar um tempo de expiração do cache.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)

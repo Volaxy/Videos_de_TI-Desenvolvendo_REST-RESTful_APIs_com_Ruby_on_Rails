@@ -9,6 +9,10 @@ module Versions::V1
             # @contacts = Contact.all.page(params[:page]).per(5)
             @contacts = Contact.all.page(params[:page]) # O ".per" é retirado por causa do "api-pagination"
 
+            # Seta um tempo de expiração do cache do navegador, na 1ª requisição é retornado o código 200, mas antes do tempo expirar, o código que será devolvido para cada nova requisição será o 304
+            # O próprio rails já realiza uma cache caso o mesmo recurso seja acessado várias vezes
+            expires_in 30.seconds, public: true
+
             paginate json: @contacts
         end
 
