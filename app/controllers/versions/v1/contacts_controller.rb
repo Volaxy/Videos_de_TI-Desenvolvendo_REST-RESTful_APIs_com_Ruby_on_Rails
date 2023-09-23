@@ -14,9 +14,11 @@ module Versions::V1
             # expires_in 30.seconds, public: true
 
             # Ao receber a resposta, no cabeçalho haverá um header chamado "ETag" que conterá um valor, esse valor será passado no header da requisição através da variável "If-None-Match"
-            if stale?(etag: @contacts)
-                render json: @contacts
-            end
+            # if stale?(etag: @contacts)
+            @contacts = Contact.all
+
+            render json: @contacts, include: [ :kind, :phones, :address ]
+            # end
 
             # paginate json: @contacts
         end

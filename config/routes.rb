@@ -14,6 +14,7 @@ Rails.application.routes.draw do
             resources :contacts do
                 resource :kind, only: [:show] # Define uma rota de "Kind" juntamente com "contacts" na URL, para retornar o "Kind" a partir do Id do "Contact"
                 resource :phones, only: [:show]
+                resource :phone, only: [ :create, :update, :destroy ]
                 resource :address, only: [ :show, :create, :update, :destroy ]
             end
         end

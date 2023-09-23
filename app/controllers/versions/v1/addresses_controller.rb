@@ -24,7 +24,6 @@ module Versions::V1
 
         # PUT
         def update
-            puts params
             if @contact.address.update(address_params)
                 render json: @contact.address
             else

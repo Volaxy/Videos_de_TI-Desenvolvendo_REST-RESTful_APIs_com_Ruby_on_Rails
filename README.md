@@ -110,7 +110,7 @@ end
 * Criação de rotas para o `Address`.
 
 ### 03 - Routes of Phones (has_many)
-
+* Criação de rotas para CRUD do `Phone` de um contato.
 
 ***
 
