@@ -175,5 +175,8 @@ end
 ### 01 - Cache Control
 * Setar um tempo de expiração do cache.
 
+### 02 - ETag
+* Definir uma **ETag**.
+
 ## :black_nib: Licença
 [Unlicense](https://unlicense.org)
